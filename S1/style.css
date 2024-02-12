@@ -8,6 +8,15 @@ header, footer {
     width: 2000px;
     height: 500px;
 }
+
 .container {
     text-align: center;
 }
+
+.error-message {
+  color: red;
+}
+
+.correct-message {
+    color: green;
+  }
