@@ -3,6 +3,7 @@
     include "../Model/employe.php";
     $error = null;
     $emp = null;
+    
     if(isset($_POST["fName"]) 
     && isset($_POST["lName"]) 
     && isset($_POST["email"]) 
@@ -26,6 +27,10 @@
         }
     }
 ?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

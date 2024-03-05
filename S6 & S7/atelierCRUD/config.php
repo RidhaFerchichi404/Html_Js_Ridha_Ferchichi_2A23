@@ -13,14 +13,19 @@ class config
                     'root',
                     '',
                     [
-                        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-                        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+                       
+                        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+
+
+                        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
                     ]
                 );
             } catch (Exception $e) {
                 die('Erreur: ' . $e->getMessage());
             }
         }
+        // add a comment for config.php
+
         return self::$pdo;
     }
 }
