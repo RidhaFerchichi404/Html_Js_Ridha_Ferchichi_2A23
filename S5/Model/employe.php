@@ -34,6 +34,21 @@ class Employe {
         public function setPassword($p) {
             $this->password = $p;
         }
+        public function getMail(){
+            return $this->email;
+        }
+
+        public function setMail($mail) {
+            $this->email = $mail;
+        }
+
+        public function getPhone() {
+            return $this->phone;
+        }
+
+        public function getDob(){
+            return $this->dOB;
+        }
 
 }
 
