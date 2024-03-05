@@ -1,36 +1,3 @@
-<?php
-    include "../Controller/EmployeC.php";
-    include "../Model/employe.php";
-    $error = null;
-    $emp = null;
-    
-    if(isset($_POST["fName"]) 
-    && isset($_POST["lName"]) 
-    && isset($_POST["email"]) 
-    && isset($_POST["dob"])){
-        if(!empty($_POST["fName"])
-        && !empty($_POST["lName"])
-        && !empty($_POST["email"])
-        && !empty($_POST["dob"])){
-            $emp = new Employe(null
-            ,$_POST["fName"]
-            ,$_POST["lName"]
-            ,new DateTime($_POST["dob"])
-            ,$_POST["email"]
-            );
-            $empC = new EmployeC();
-            $empC->addEmploye($emp);
-            header('Location:ListEmploye.php');
-        }
-        else{
-            $error = "Missing info"; 
-        }
-    }
-?>
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,3 +35,34 @@
     </form>
 </body>
 </html>
+
+
+<?php
+    include "../Controller/EmployeC.php";
+    include "../Model/employe.php";
+    $error = null;
+    $emp = null;
+    
+    if(isset($_POST["fName"]) 
+    && isset($_POST["lName"]) 
+    && isset($_POST["email"]) 
+    && isset($_POST["dob"])){
+        if(!empty($_POST["fName"])
+        && !empty($_POST["lName"])
+        && !empty($_POST["email"])
+        && !empty($_POST["dob"])){
+            $emp = new Employe(null
+            ,$_POST["fName"]
+            ,$_POST["lName"]
+            ,new DateTime($_POST["dob"])
+            ,$_POST["email"]
+            );
+            $empC = new EmployeC();
+            $empC->addEmploye($emp);
+            header('Location:ListEmploye.php');
+        }
+        else{
+            $error = "Missing info"; 
+        }
+    }
+?>
